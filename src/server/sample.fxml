@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchor" onContextMenuRequested="#contextMenu" prefHeight="800.0" prefWidth="800.0" styleClass="bodybg" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.Controller">
+
+    <ImageView fx:id="tatami" fitHeight="800.0" fitWidth="800.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <viewport>
+          <Rectangle2D />
+        </viewport>
+        <Image url="@img/tatami.jpg" />
+    </ImageView>
+    <GridPane fx:id="grid" prefHeight="800.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <ImageView fx:id="chairA" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#test" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Image url="@img/Chair1.png" />
+        </ImageView>
+        <ImageView fx:id="chairB" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#test" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Image url="@img/Chair2.png" />
+        </ImageView>
+        <ImageView fx:id="chairC" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#test" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Image url="@img/Chair1.png" />
+        </ImageView>
+        <ImageView fx:id="chairD" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#test" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Image url="@img/Chair2.png" />
+        </ImageView>
+        <!--<VBox layoutX="154.0" layoutY="83.0" prefHeight="200.0" prefWidth="135.0">
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Установить счёт">
+               <VBox.margin>
+                   <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Сбросить счёт">
+               <VBox.margin>
+                   <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Удалить">
+               <VBox.margin>
+                   <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+        </VBox> -->
+        <TextFlow fx:id="scoreA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="202.0" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+            <Text fx:id="scoreA_WHITE" fill="WHITE" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+            <Text stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="42.0" />
+                </font>
+            </Text>
+            <Text fx:id="scoreA_RED" fill="RED" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+        </TextFlow>
+        <TextFlow fx:id="scoreB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="184.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+            <Text fx:id="scoreB_WHITE" fill="WHITE" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+            <Text stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="42.0" />
+                </font>
+            </Text>
+            <Text fx:id="scoreB_RED" fill="RED" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+        </TextFlow>
+        <TextFlow fx:id="scoreC" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="204.0" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <Text fx:id="scoreC_WHITE" fill="WHITE" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+            <Text stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="42.0" />
+                </font>
+            </Text>
+            <Text fx:id="scoreC_RED" fill="RED" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+        </TextFlow>
+        <TextFlow fx:id="scoreD" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="237.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <Text fx:id="scoreD_WHITE" fill="WHITE" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+            <Text stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="42.0" />
+                </font>
+            </Text>
+            <Text fx:id="scoreD_RED" fill="RED" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+        </TextFlow>
+        <TextFlow fx:id="mid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="265.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Text fx:id="midWHITE" fill="WHITE" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+            <Text stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="42.0" />
+                </font>
+            </Text>
+            <Text fx:id="midRED" fill="RED" stroke="#030303" strokeType="OUTSIDE" strokeWidth="2.0" text="0">
+                <font>
+                    <Font name="Segoe UI Black Italic" size="58.0" />
+                </font>
+            </Text>
+        </TextFlow>
+        <Button mnemonicParsing="false" onAction="#results" prefHeight="64.0" prefWidth="244.0" style="-fx-background-color: #010101; -fx-border-color: #00FF00; -fx-border-radius: 10; -fx-background-radius: 15; -fx-border-width: 10;" text="Подвести итоги" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+           <font>
+               <Font name="Segoe UI Black" size="20.0" />
+           </font>
+        </Button>
+      <Text fx:id="roundstat" strokeType="OUTSIDE" strokeWidth="0.0" text="НОМЕР БОЯ: 1" textAlignment="CENTER" wrappingWidth="805.357421875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Segoe UI Black" size="33.0" />
+         </font>
+      </Text>
+    </GridPane>
+</AnchorPane>

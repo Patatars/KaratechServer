@@ -1,0 +1,4 @@
+.bodybg{
+    -fx-background-image: url("img/tatami.jpg");
+    -fx-background-size: 100% 100%;
+}
